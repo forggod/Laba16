@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="Ru">
+
+<head>
+    <!-- Кодировка веб-страницы -->
+    <meta charset="UTF-8">
+    <!-- Настройка viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Подключение css файла -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Название веб-страницы во вкладках -->
+    <title>Laba 16</title>
+</head>
+
+<body>
+    <form style="margin: auto; width: 50%; height: 50%; border: 3px solid green; padding: 10px;" 
+	action="/cgi-bin/form_customer_list.py" >
+	    <h1 style="text-align: center;">Форма</h1>
+	    <div class="form_item" style="text-align: center;">
+	    	<labelclass="form_label">Наименование заказщика</label> <br>
+	    	<input type="text" name="customer_name">
+	    </div>
+	    <div class="form_item" style="text-align: center;">
+	    	<labelclass="form_label">Количество материала</label> <br>
+	    	<input type="text" name="material_count">
+	    </div>
+		<div class="form_item" style="text-align: center;">
+			<label class="form_label">Тип материала</label> <br>
+			<select name="material_type">
+				<option value="1">Брус</option>
+				<option value="2">Брусок</option>
+				<option value="3">Доска</option>
+				<option value="4">Штакетник</option>
+				<option value="5">Шпала</option>
+				<option value="6">Обапол</option>
+				<option value="7">Горбыль</option>
+			</select>
+		</div>
+	    <div class="form_item" style="text-align: center; margin: 7px; padding: 7px;">
+	    	<button class="form_button" type="submit" id="formConfirm">«Отправить»</button>
+	    </div>
+    </form ss>
+	<form style="margin: 25px auto; width: 50%; height: 50%; border: 3px solid green; padding: 10px;" 
+	action="/cgi-bin/form_show_records.py" >
+		<div class="form_item" style="text-align: center; margin: 7px; padding: 7px;">
+			<button class="form_button" type="submit" id="formConfirm">«Показать записи»</button>
+		</div>
+	</form>
+	<form style="margin: 25px auto; width: 50%; height: 50%; border: 3px solid green; padding: 10px;" 
+	action="/cgi-bin/form_update_record.py" >
+		<h3 style="text-align: center;">Изменение по имени заказщика</h3>
+		<div class="form_item" style="text-align: center; margin: 7px; padding: 7px;">
+			<div class="form_item" style="text-align: center;">
+				<labelclass="form_label">Наименование заказщика</label> <br>
+				<input type="text" name="customer_name">
+			</div>
+			<div class="form_item" style="text-align: center;">
+				<labelclass="form_label">Изменение количества</label> <br>
+				<input type="text" name="material_count">
+			</div>
+			<div class="form_item" style="text-align: center;">
+				<label class="form_label">Именение типа материала</label> <br>
+				<select name="material_type">
+					<option value="1">Брус</option>
+					<option value="2">Брусок</option>
+					<option value="3">Доска</option>
+					<option value="4">Штакетник</option>
+					<option value="5">Шпала</option>
+					<option value="6">Обапол</option>
+					<option value="7">Горбыль</option>
+				</select>
+			</div>
+			<button class="form_button" style="text-align: center; margin: 14px; padding: 3px;" type="submit" id="formConfirm">«Обновить»</button>
+		</div>
+	</form>
+	<form style="margin: 25px auto; width: 50%; height: 50%; border: 3px solid green; padding: 10px;" 
+	action="/cgi-bin/form_delete_record.py" >
+		<h3 style="text-align: center;">Удаление по имени заказщика</h3>
+		<div class="form_item" style="text-align: center; margin: 7px; padding: 7px;">
+			<div class="form_item" style="text-align: center;">
+				<labelclass="form_label">Удаление заказщика</label> <br>
+				<input type="text" name="customer_name">
+			</div>
+			<button class="form_button" style="text-align: center; margin: 14px; padding: 3px;" type="submit" id="formConfirm">«Удалить»</button>
+		</div>
+	</form>
+</body>
